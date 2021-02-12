@@ -41,6 +41,7 @@ import TableChartPlugin from '@superset-ui/plugin-chart-table';
 import TreemapChartPlugin from '@superset-ui/legacy-plugin-chart-treemap';
 import { WordCloudChartPlugin } from '@superset-ui/plugin-chart-word-cloud';
 import WorldMapChartPlugin from '@superset-ui/legacy-plugin-chart-world-map';
+import { MsmChartPlugin } from '@superset-ui/plugin-chart-msm';
 import {
   AreaChartPlugin,
   BarChartPlugin,
@@ -111,6 +112,7 @@ export default class MainPreset extends Preset {
         new EchartsTimeseriesChartPlugin().configure({
           key: 'echarts_timeseries',
         }),
+        new MsmChartPlugin().configure({ key: 'msm' }),
         new AntdSelectFilterPlugin().configure({ key: 'filter_select' }),
         new AntdRangeFilterPlugin().configure({ key: 'filter_range' }),
       ],
